@@ -1,0 +1,46 @@
+TrajectoryPlannerROS:
+
+  ## NOTE:
+   # Distances are in meters.
+   # Times are in seconds.
+   # Angles are in radians.
+   # See https://wiki.ros.org/base_local_planner?distro=melodic#Parameters for more information.
+
+  # Vehicle configuration
+  max_vel_x: 0.2
+  min_vel_x: 0.1
+  max_vel_theta: 0.4
+  min_vel_theta: -0.4
+  min_in_place_vel_theta: 0.2
+  acc_lim_theta: 0.05
+  acc_lim_x: 0.05
+  acc_lim_Y: 1.0
+  escape_vel: -0.1
+  holonomic_robot: false
+
+  # Trajectory scoring
+  heading_lookahead: 6.0
+  path_distance_bias: 0.6
+  goal_distance_bias: 0.5  #default : 1.0  arch building road following : 0.5
+  occdist_scale: 0.3
+
+  # Forward simulation
+  sim_time: 8.0
+  sim_granularity: 0.3
+  angular_sim_granularity: 0.3
+
+  # Goal tolerance
+  xy_goal_tolerance: 2.0
+  yaw_goal_tolerance: 3.14
+  latch_xy_goal_tolerance: false
+
+  # Oscillation prevention
+  oscillation_reset_dist: 0.05
+
+  # Escape
+  escape_reset_dist: 0.15
+
+  # Samples config
+  vx_samples: 20
+  vtheta_samples: 20
+  simple_attractor: true

@@ -1,0 +1,16 @@
+<launch>
+  <node pkg="move_base" type="move_base" respawn="false" name="MOVE" output="screen">
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <!-- <remap from="cmd_vel" to="/move_base/cmd_vel_move_base"/> -->
+    
+    <rosparam file="$(find rover_launcher)/params/costmap_common_params_pspnet_dev.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find rover_launcher)/params/costmap_common_params_pspnet_dev.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find rover_launcher)/params/local_costmap_params_pspnet_dev.yaml" command="load" />
+    <rosparam file="$(find rover_launcher)/params/global_costmap_params_pspnet_dev.yaml" command="load" />
+    <rosparam file="$(find rover_launcher)/params/move_base.yaml" command="load" />
+    <rosparam file="$(find rover_launcher)/params/trajectory_planner.yaml" command="load" />
+    <rosparam file="$(find rover_launcher)/params/global_planner.yaml" command="load" />
+  </node>
+
+</launch> 

@@ -1,0 +1,9 @@
+GlobalPlanner:
+
+  default_tolerance: 1.0
+  orientation_mode: 0
+
+# NavfnROS:
+#   allow_unknown: true
+#   default_tolerance: 1.0
+#   orientation_mode: 1

@@ -1,0 +1,17 @@
+planner_frequency: 2  #5
+controller_frequency: 2.5
+obstacle_range: 10.0 #6.0
+raytrace_range: 8.5
+# footprint: [[0.2032, 0.22875], [0.2032, -0.22875], [-0.2032, -0.22875], [-0.2032, 0.22875]] # Based on Actual Aion dimensions
+# footprint: [[0.3, 0.2], [0.3, -0.2], [-0.3, -0.2], [-0.3, 0.2]] # Pre-FX4
+footprint: [[0.4, 0.3], [0.4, -0.3], [-0.4, -0.3], [-0.4, 0.3]]
+map_topic: map
+subscribe_to_updates: true
+global_frame: map
+robot_base_frame: base_link
+max_obstacle_height: 0.7
+#min_obstacle_height: 0.06
+wheel_leg_transform: true
+wheel_avaliable_max_obstacle_height : 0.0
+leg_available_max_obstacle_height : 0.15  #0.4
+leg_available_map_cost : 40  # 40

@@ -1,0 +1,19 @@
+global_costmap:
+  controller_frequency: 1
+  update_frequency: 1  #2.5
+  publish_frequency: 1 #2.5
+  transform_tolerance: 0.5
+  width: 250
+  height: 250
+  static_map: false
+  rolling_window: true
+  obstacle_range: 20.0 #6.0
+  inflation_radius: 0.1 #0.1
+  resolution: 0.3 #0.3
+  global_frame: map
+  robot_base_frame: base_link
+  track_unknown_space: true
+  allow_unknown: true
+  default_tolerance: 2.0
+  observation_sources: laser_scan
+  laser_scan: {sensor_frame: lidar_link, data_type: LaserScan, topic: scan_fake, marking: true, clearing: true}

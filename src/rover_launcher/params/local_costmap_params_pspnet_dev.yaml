@@ -1,0 +1,20 @@
+local_costmap:
+  controller_frequency: 1
+  update_frequency: 2  #5
+  publish_frequency: 2 #5
+  transform_tolerance: 1.5
+  static_map: false
+  rolling_window: true
+  obstacle_range: 6.0 #6.0
+  width: 15
+  height: 15
+  resolution: 0.2  #0.5
+  cost_scaling_factor: 4.0
+  inflation_radius: 0.1
+  global_frame: map
+  robot_base_frame: base_link
+  observation_sources:   depth_cloud  laser_scan  segmentation_cloud
+  laser_scan: {sensor_frame: lidar_link, data_type: LaserScan, topic: scan, marking: true, clearing: true, inf_is_valid: true}
+  depth_cloud: {sensor_frame: camera_link, data_type: PointCloud2, topic: obstacles, marking: true, clearing: true, min_obstacle_height: 0.00, max_obstacle_height: 0.5, height_map_update: true, original_costmap_update: false}
+# depth_cloud2: {sensor_frame: camera_link, data_type: PointCloud2, topic: ground, marking: true, clearing: true, min_obstacle_height: 0.1, max_obstacle_height: 0.2, height_map_update: true}
+  segmentation_cloud: {sensor_frame: camera_link, data_type: PointCloud2, topic: pspnet_output/pointcloud, marking: true, clearing: false, min_obstacle_height: -0.3, max_obstacle_height: 0.5, height_map_update: true, pointcloud_w_intensity: true, original_costmap_update: false}

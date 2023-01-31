@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rover_launcher</name>
+  <version>0.0.1</version>
+  <description>Rover launcher</description>
+
+  <license>Proprietary</license>
+
+  <author email="giovani.diniz@bbn.com">Giovani Del Nero Diniz</author>
+  <maintainer email="giovani.diniz@bbn.com">Giovani Del Nero Diniz</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+
+  <exec_depend>rospy</exec_depend>
+
+</package>
