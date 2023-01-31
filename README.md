@@ -7,6 +7,8 @@ Original move base SW: https://github.com/ros-planning/navigation
 \
 This SW is for multi-terrain wheeled robot (or wheel-leg hybrid robot) 
 \
+The detail of robot is described in TRO paper (see the below citation info)
+\
 \
 \
 1.Download the github repository
